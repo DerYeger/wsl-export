@@ -14,6 +14,9 @@
     "prepublishOnly": "yarn build"
   },
   "main": "./dist/index.js",
+  "files": [
+    "dist/*"
+  ],
   "bin": {
     "wsle": "./dist/index.js"
   },
