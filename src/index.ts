@@ -67,4 +67,4 @@ async function main() {
   await exportDistributions(destination, selectedDistros)
 }
 
-main().catch(console.error)
+main().catch(() => {})

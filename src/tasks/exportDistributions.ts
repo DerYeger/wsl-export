@@ -13,7 +13,7 @@ export function createBackupTask(
         task.output = 'Export started. This may take a while.'
         await execa(`wsl --export ${distro} ${dir}\\${distro}.tar`)
       } catch (e: any) {
-        return Promise.reject(`Something went wrong while exporting ${distro}.`)
+        throw new Error(`Something went wrong while exporting ${distro}.`)
       }
     },
   }
