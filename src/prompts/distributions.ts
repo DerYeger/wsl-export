@@ -6,11 +6,12 @@ export interface DistributionSelection {
   distributions: Distribution[]
 }
 
-export function promptDistributionSelection(): Promise<DistributionSelection> {
+export async function promptDistributionSelection(): Promise<DistributionSelection> {
+  const distributions = await getDistributions()
   return inquirer.prompt({
     type: 'checkbox',
     message: 'Select distributions to export:',
     name: 'distributions',
-    choices: getDistributions(),
+    choices: distributions,
   })
 }

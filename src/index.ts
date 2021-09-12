@@ -52,7 +52,7 @@ async function main() {
   const { options } = parseCommand()
 
   const { distributions } = options.all
-    ? { distributions: getDistributions() }
+    ? { distributions: await getDistributions() }
     : await promptDistributionSelection()
   if (distributions.length === 0) {
     console.log('No distribution selected.')
