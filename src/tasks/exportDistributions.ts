@@ -12,7 +12,7 @@ function createExportTask(
     title: distro,
     task: async (_, task) => {
       if (availableDistros.indexOf(distro) === -1) {
-        throw new Error(`${chalk.blue(distro)} does not exist`)
+        throw new Error(`${chalk.red(distro)} does not exist`)
       }
       try {
         task.output = 'This may take a while'

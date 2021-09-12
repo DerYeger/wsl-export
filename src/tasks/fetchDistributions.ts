@@ -1,3 +1,4 @@
+import chalk from 'chalk'
 import execa from 'execa'
 import { Listr } from 'listr2'
 import { Distribution } from 'wsl-export/types'
@@ -16,7 +17,7 @@ export async function fetchDistributions(): Promise<{
             .replace(/\s\(Default\)/, '')
             .split('\n')
             .slice(1, -1)
-          task.title = `Found ${distros.length} distributions`
+          task.title = `Found ${chalk.cyan(distros.length)} distributions`
           ctx.distros = distros
         } catch (_) {
           throw new Error(
