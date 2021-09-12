@@ -9,7 +9,7 @@ export interface DistributionSelection {
 export function promptDistributionSelection(): Promise<DistributionSelection> {
   return inquirer.prompt({
     type: 'checkbox',
-    message: 'Select distributions:',
+    message: 'Select distributions to export:',
     name: 'distributions',
     choices: getDistributions(),
   })

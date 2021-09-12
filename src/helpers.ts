@@ -1,5 +1,13 @@
 import { execSync } from 'child_process'
+import { readFileSync } from 'fs'
+import path from 'path'
 import { Directory, Distribution } from 'wsl-export/types'
+
+export function getVersion(): string {
+  return JSON.parse(
+    readFileSync(path.join(__dirname, '..', 'package.json')).toString()
+  ).version
+}
 
 export function getDistributions(): string[] {
   return execSync('wsl -l --all')
