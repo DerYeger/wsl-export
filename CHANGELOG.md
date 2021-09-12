@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/DerYeger/wsl-export/compare/v1.2.0...v1.2.1) (2021-09-12)
+
+
+### Bug Fixes
+
+* remove trailing slashes of target directory ([f0a157c](https://github.com/DerYeger/wsl-export/commit/f0a157c70e0bf36c40ec70fbb7ccfb3b73785c7f))
+
 # [1.2.0](https://github.com/DerYeger/wsl-export/compare/v1.1.0...v1.2.0) (2021-09-12)
 
 
