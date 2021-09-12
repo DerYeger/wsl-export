@@ -5,14 +5,15 @@ import { Command, OptionValues } from 'commander'
 import { clear } from 'console'
 import figlet from 'figlet'
 import { getVersion } from 'wsl-export/helpers'
-import { promptDestinationInput } from 'wsl-export/prompts/destination'
-import { promptDistributionSelection } from 'wsl-export/prompts/distributions'
+import { promptDistributionSelection } from 'wsl-export/prompts/distributionSelection'
+import { promptTargetDirectoryInput } from 'wsl-export/prompts/targetDirectoryInput'
+import { checkTargetDirectory } from 'wsl-export/tasks/checkTargetDirectory'
 import { exportDistributions } from 'wsl-export/tasks/exportDistributions'
 import { fetchDistributions } from 'wsl-export/tasks/fetchDistributions'
 
 export interface Options extends OptionValues {
   all: boolean
-  destination?: string
+  targetDir?: string
   help?: boolean
 }
 
@@ -21,8 +22,12 @@ export function parseCommand(): { options: Options } {
 
   const command = new Command()
     .version(version)
-    .option('-a --all', 'Export all distributions', false)
-    .option('-d --destination <destination>', 'Destination of exported files')
+    .name('wsle')
+    .option('-a --all', 'export all distributions', false)
+    .option(
+      '-t --target-dir <target-directory>',
+      'set directory of exported files'
+    )
     .option('-h --help')
 
   const options = command.parse().opts<Options>()
@@ -52,19 +57,22 @@ async function main() {
   const { distros } = await fetchDistributions()
   console.log()
 
-  const { selectedDistros } = options.all
-    ? { selectedDistros: distros }
-    : await promptDistributionSelection(distros)
+  const selectedDistros = options.all
+    ? distros
+    : (await promptDistributionSelection(distros)).selection
 
   if (selectedDistros.length === 0) {
-    console.log('No distribution selected.')
+    console.log('No distribution selected')
     return
   }
 
-  const { destination } = await promptDestinationInput()
+  const { targetDir } = await promptTargetDirectoryInput()
 
   console.log()
-  await exportDistributions(destination, selectedDistros)
+  await checkTargetDirectory(targetDir)
+
+  console.log()
+  await exportDistributions(targetDir, selectedDistros)
 }
 
 main().catch(() => {})
