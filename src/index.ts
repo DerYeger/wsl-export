@@ -23,7 +23,7 @@ export interface Options extends OptionValues {
 
 async function main(args: Arguments, options: Options, command: Command) {
   clear()
-  const header = chalk.blue(
+  const header = chalk.green(
     figlet.textSync('wsl-export', {
       horizontalLayout: 'fitted',
     })
@@ -51,10 +51,11 @@ async function main(args: Arguments, options: Options, command: Command) {
     return
   }
 
-  const targetDir: string =
+  const targetDir: string = (
     args.targetDir !== undefined
       ? args.targetDir!!
       : (await promptTargetDirectoryInput()).targetDir
+  ).replace(/\\$/, '')
 
   await checkTargetDirectory(targetDir)
 
