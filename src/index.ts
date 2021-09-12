@@ -4,13 +4,11 @@ import chalk from 'chalk'
 import { Command, OptionValues } from 'commander'
 import { clear } from 'console'
 import figlet from 'figlet'
-import {
-  exportDistribution,
-  getDistributions,
-  getVersion,
-} from 'wsl-export/helpers'
+import { getVersion } from 'wsl-export/helpers'
 import { promptDestinationInput } from 'wsl-export/prompts/destination'
 import { promptDistributionSelection } from 'wsl-export/prompts/distributions'
+import { exportDistributions } from 'wsl-export/tasks/exportDistributions'
+import { fetchDistributions } from 'wsl-export/tasks/fetchDistributions'
 
 export interface Options extends OptionValues {
   all: boolean
@@ -51,18 +49,22 @@ async function main() {
 
   const { options } = parseCommand()
 
-  const { distributions } = options.all
-    ? { distributions: await getDistributions() }
-    : await promptDistributionSelection()
-  if (distributions.length === 0) {
+  const { distros } = await fetchDistributions()
+  console.log()
+
+  const { selectedDistros } = options.all
+    ? { selectedDistros: distros }
+    : await promptDistributionSelection(distros)
+
+  if (selectedDistros.length === 0) {
     console.log('No distribution selected.')
     return
   }
 
   const { destination } = await promptDestinationInput()
-  distributions.forEach((distro) => {
-    exportDistribution(destination, distro)
-  })
+
+  console.log()
+  await exportDistributions(destination, selectedDistros)
 }
 
 main().catch(console.error)
