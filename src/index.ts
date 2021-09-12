@@ -10,69 +10,72 @@ import { promptTargetDirectoryInput } from 'wsl-export/prompts/targetDirectoryIn
 import { checkTargetDirectory } from 'wsl-export/tasks/checkTargetDirectory'
 import { exportDistributions } from 'wsl-export/tasks/exportDistributions'
 import { fetchDistributions } from 'wsl-export/tasks/fetchDistributions'
+import { Directory, Distribution } from 'wsl-export/types'
+
+interface Arguments {
+  targetDir: Directory | undefined
+  distros: Distribution[] | undefined
+}
 
 export interface Options extends OptionValues {
-  all: boolean
-  targetDir?: string
   help?: boolean
 }
 
-export function parseCommand(): { options: Options } {
-  const version = getVersion()
-
-  const command = new Command()
-    .version(version)
-    .name('wsle')
-    .option('-a --all', 'export all distributions', false)
-    .option(
-      '-t --target-dir <target-directory>',
-      'set directory of exported files'
-    )
-    .option('-h --help')
-
-  const options = command.parse().opts<Options>()
+async function main(args: Arguments, options: Options, command: Command) {
+  clear()
+  const header = chalk.blue(
+    figlet.textSync('wsl-export', {
+      horizontalLayout: 'fitted',
+    })
+  )
+  console.log(header)
 
   if (options.help) {
     command.help()
   }
 
-  return {
-    options,
-  }
-}
-
-const header = chalk.blue(
-  figlet.textSync('wsl-export', {
-    horizontalLayout: 'fitted',
-  })
-)
-
-async function main() {
-  clear()
-
-  console.log(header)
-
-  const { options } = parseCommand()
-
   const { distros } = await fetchDistributions()
   console.log()
 
-  const selectedDistros = options.all
-    ? distros
-    : (await promptDistributionSelection(distros)).selection
+  const selectedDistros: Distribution[] = []
+  if (options.all) {
+    selectedDistros.push(...distros)
+  } else if (args.distros !== undefined && args.distros.length > 0) {
+    selectedDistros.push(...args.distros)
+  } else {
+    const { selection } = await promptDistributionSelection(distros)
+    selectedDistros.push(...selection)
+  }
 
   if (selectedDistros.length === 0) {
-    console.log('No distribution selected')
+    console.log('No distributions selected')
     return
   }
 
-  const { targetDir } = await promptTargetDirectoryInput()
+  const targetDir: string =
+    args.targetDir !== undefined
+      ? args.targetDir!!
+      : (await promptTargetDirectoryInput()).targetDir
 
-  console.log()
   await checkTargetDirectory(targetDir)
 
   console.log()
-  await exportDistributions(targetDir, selectedDistros)
+  await exportDistributions(targetDir, selectedDistros, distros)
 }
 
-main().catch(() => {})
+new Command()
+  .version(getVersion())
+  .name('wsle')
+  .argument('[target-directory]', 'directory of exported files')
+  .argument('[distributions...]', 'distributions to export')
+  .option('-a --all', 'export all distributions', false)
+  .option('-h --help')
+  .action(
+    (
+      targetDir: string | undefined,
+      distros: Distribution[] | undefined,
+      options: Options,
+      command
+    ) => main({ targetDir, distros }, options, command).catch(() => {})
+  )
+  .parse()
