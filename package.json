@@ -11,7 +11,8 @@
     "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
     "lint": "eslint --fix --ext \".js,.json,.ts\"",
     "pretty": "prettier --write \"./**/*.{js,json,ts,yml}\"",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "local": "yarn unlink && yarn build && yarn link && wsle"
   },
   "main": "./dist/index.js",
   "files": [
