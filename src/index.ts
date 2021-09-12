@@ -35,7 +35,6 @@ async function main(args: Arguments, options: Options, command: Command) {
   }
 
   const { distros } = await fetchDistributions()
-  console.log()
 
   const selectedDistros: Distribution[] = []
   if (options.all) {
@@ -59,7 +58,6 @@ async function main(args: Arguments, options: Options, command: Command) {
 
   await checkTargetDirectory(targetDir)
 
-  console.log()
   await exportDistributions(targetDir, selectedDistros, distros)
 }
 

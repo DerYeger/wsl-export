@@ -29,6 +29,7 @@ export async function exportDistributions(
   distros: Distribution[],
   availableDistros: Distribution[]
 ): Promise<void> {
+  console.log()
   return new Listr(
     [
       {

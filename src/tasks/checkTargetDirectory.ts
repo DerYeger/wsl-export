@@ -4,6 +4,7 @@ import { accessDirectory } from 'wsl-export/helpers'
 import { Directory } from 'wsl-export/types'
 
 export async function checkTargetDirectory(dir: Directory): Promise<void> {
+  console.log()
   return new Listr([
     {
       title: 'Checking target directory',
