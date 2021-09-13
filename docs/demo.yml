@@ -1,0 +1,219 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: powershell.exe -nologo
+
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: C:\Users\janmu
+
+  # Export additional ENV variables
+  env:
+    recording: true
+
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 120
+
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 30
+
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+
+  # Quality
+  # 1 - 100
+  quality: 100
+
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: 'CaskaydiaCove NF, Monaco, Lucida Console, Ubuntu Mono, Monospace'
+
+  # The size of the font
+  fontSize: 12
+
+  # The height of lines
+  lineHeight: 1
+
+  # The spacing between letters
+  letterSpacing: 0
+
+  # Theme
+  theme:
+    background: 'transparent'
+    foreground: '#afafaf'
+    cursor: '#c7c7c7'
+    black: '#232628'
+    red: '#fc4384'
+    green: '#b3e33b'
+    yellow: '#ffa727'
+    blue: '#75dff2'
+    magenta: '#ae89fe'
+    cyan: '#708387'
+    white: '#d5d5d0'
+    brightBlack: '#626566'
+    brightRed: '#ff7fac'
+    brightGreen: '#c8ed71'
+    brightYellow: '#ebdf86'
+    brightBlue: '#75dff2'
+    brightMagenta: '#ae89fe'
+    brightCyan: '#b1c6ca'
+    brightWhite: '#f9f9f4'
+
+# Records, feel free to edit them
+records:
+  - delay: 0
+    content: "\e[?25l\e[32m                 _                                         _\e[K\r\n __      __ ___ | |         ___ __  __ _ __    ___   _ __ | |_\e[K\r\n \\ \\ /\\ / // __|| | _____  / _ \\\\ \\/ /| '_ \\  / _ \\ | '__|| __|\e[K\r\n  \\ V  V / \\__ \\| ||_____||  __/ >  < | |_) || (_) || |   | |_\e[K\r\n   \\_/\\_/  |___/|_|        \\___|/_/\\_\\| .__/  \\___/ |_|    \\__|\e[K\r\n                                      |_|\e[K\e[m\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\e[7;1H\e[?25h"
+  - delay: 100
+    content: "\e[93m⠋ \e[mFetching installed distributions\e[K\r\n\e[K\e[?25l\e[120C"
+  - delay: 100
+    content: "\e[32m\e[7;1H✔ \e[mFound \e[36m3 \e[mdistributions\e[K\r\n\e[K\e[32m\r\n? \e[m\e[1mSelect distributions to export:\e[22m (Press \e[36m\e[1m<space>\e[m to select, \e[36m\e[1m<a>\e[m to toggle all, \e[36m\e[1m<i>\e[m to invert selection)\e[36m\r\n>( ) Ubuntu-20.04\e[m\r\n ( ) docker-desktop\r\n ( ) docker-desktop-data"
+  - delay: 1015
+    content: "\e[9;1H\e[K\r\n\e[K\r\n\e[K\r\n\e[K\e[120C"
+  - delay: 17
+    content: "\e[32m\e[9;1H? \e[m\e[1mSelect distributions to export:\e[22m \e[36m\r\n>\e[32m(*) \e[36mUbuntu-20.04\e[m\r\n ( ) docker-desktop\r\n ( ) docker-desktop-data"
+  - delay: 407
+    content: "\e[9;1H\e[K\r\n\e[K\r\n\e[K\r\n\e[K\e[120C"
+  - delay: 15
+    content: "\e[32m\e[9;1H? \e[m\e[1mSelect distributions to export:\e[22m \r\n \e[32m(*) \e[mUbuntu-20.04\e[36m\r\n>( ) docker-desktop\e[m\r\n ( ) docker-desktop-data"
+  - delay: 265
+    content: "\e[9;1H\e[K\r\n\e[K\r\n\e[K\r\n\e[K\e[120C"
+  - delay: 16
+    content: "\e[32m\e[9;1H? \e[m\e[1mSelect distributions to export:\e[22m \r\n \e[32m(*) \e[mUbuntu-20.04\e[36m\r\n>\e[32m(*) \e[36mdocker-desktop\e[m\r\n ( ) docker-desktop-data"
+  - delay: 402
+    content: "\e[9;1H\e[K\r\n\e[K\r\n\e[K\r\n\e[K\e[120C"
+  - delay: 18
+    content: "\e[32m\e[9;1H? \e[m\e[1mSelect distributions to export:\e[22m \e[36mUbuntu-20.04, docker-desktop\e[32m\e[11;1H? \e[m\e[1mTarget directory:\e[22m \e[?25h"
+  - delay: 1018
+    content: "\r\e[K"
+  - delay: 13
+    content: "\e[32m? \e[m\e[1mTarget directory:\e[22m S:\\backup\e[K"
+  - delay: 757
+    content: "\r\e[K"
+  - delay: 14
+    content: "\e[?25l\e[32m? \e[m\e[1mTarget directory:\e[22m \e[36mS:\\backup\e[32m\e[13;1H✔ \e[mTarget directory \e[36mS:\\backup \e[mexists\e[K\r\n\e[K\e[33m\r\n❯ \e[mExport\e[K\r\n  \e[93m⠋ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[93m⠋ \e[mdocker-desktop\e[K\r\n    › This may take a while\e[K\e[93C"
+  - delay: 110
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠙ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[93m⠙ \e[mdocker-desktop\e[K\r\n    › This may take a while\e[K\r\n\e[K\e[120C"
+  - delay: 111
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠹ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[93m⠹ \e[mdocker-desktop\e[K\r\n    › This may take a while\e[K\r\n\e[K\e[120C"
+  - delay: 108
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠸ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[93m⠸ \e[mdocker-desktop\e[K\r\n    › This may take a while\e[K\r\n\e[K\e[120C"
+  - delay: 111
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠼ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[93m⠼ \e[mdocker-desktop\e[K\r\n    › This may take a while\e[K\r\n\e[K\e[120C"
+  - delay: 111
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠴ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[93m⠴ \e[mdocker-desktop\e[K\r\n    › This may take a while\e[K\r\n\e[K\e[120C"
+  - delay: 110
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠦ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[93m⠦ \e[mdocker-desktop\e[K\r\n    › This may take a while\e[K\r\n\e[K\e[120C"
+  - delay: 112
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠧ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[93m⠧ \e[mdocker-desktop\e[K\r\n    › This may take a while\e[K\r\n\e[K\e[120C"
+  - delay: 112
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠇ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[93m⠇ \e[mdocker-desktop\e[K\r\n    › This may take a while\e[K\r\n\e[K\e[120C"
+  - delay: 110
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠏ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\r\n\e[K\e[120C"
+  - delay: 110
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠋ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 109
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠙ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 109
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠹ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 111
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠸ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 111
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠼ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 108
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠴ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 110
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠦ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 110
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠧ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 112
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠇ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 110
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠏ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 110
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠋ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 110
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠙ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 111
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠹ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 111
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠸ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 108
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠼ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 109
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠴ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 111
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠦ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 107
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠧ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 110
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠇ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 110
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠏ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 111
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠋ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 112
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠙ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 110
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠹ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 110
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠸ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 110
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠼ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 112
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠴ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 108
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠦ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 110
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠧ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 108
+    content: "\e[33m\e[15;1H❯ \e[mExport\e[K\r\n  \e[93m⠇ \e[mUbuntu-20.04\e[K\r\n    › This may take a while\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\e[120C"
+  - delay: 32
+    content: "\e[32m\e[15;1H✔ \e[mExport\e[K\r\n  \e[32m✔ \e[mUbuntu-20.04\e[K\r\n  \e[32m✔ \e[mdocker-desktop\e[K\r\n\e[K\r\n\e[K\e[18;1H\e[?25h"

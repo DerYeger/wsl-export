@@ -19,6 +19,8 @@
   </a>
 </p>
 
+<p align="center"><img src="/docs/demo.gif?raw=true"/></p>
+
 ## Installation
 
 ```bash
