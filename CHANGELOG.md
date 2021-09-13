@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/DerYeger/wsl-export/compare/v1.2.1...v1.2.2) (2021-09-13)
+
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([fc3d54d](https://github.com/DerYeger/wsl-export/commit/fc3d54d6e1fd56c874b34d1d39f68ec99992e161))
+
 ## [1.2.1](https://github.com/DerYeger/wsl-export/compare/v1.2.0...v1.2.1) (2021-09-12)
 
 
