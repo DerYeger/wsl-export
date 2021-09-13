@@ -107,7 +107,7 @@ config:
 
 # Records, feel free to edit them
 records:
-  - delay: 0
+  - delay: 2000
     content: "\e[?25l\e[32m                 _                                         _\e[K\r\n __      __ ___ | |         ___ __  __ _ __    ___   _ __ | |_\e[K\r\n \\ \\ /\\ / // __|| | _____  / _ \\\\ \\/ /| '_ \\  / _ \\ | '__|| __|\e[K\r\n  \\ V  V / \\__ \\| ||_____||  __/ >  < | |_) || (_) || |   | |_\e[K\r\n   \\_/\\_/  |___/|_|        \\___|/_/\\_\\| .__/  \\___/ |_|    \\__|\e[K\r\n                                      |_|\e[K\e[m\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\e[7;1H\e[?25h"
   - delay: 100
     content: "\e[93m⠋ \e[mFetching installed distributions\e[K\r\n\e[K\e[?25l\e[120C"
