@@ -12,6 +12,7 @@
     "lint": "eslint --fix --ext \".js,.json,.ts\"",
     "pretty": "prettier --write \"./**/*.{js,json,ts,yml}\"",
     "prepublishOnly": "yarn build",
+    "prepare": "husky install",
     "local": "yarn unlink && yarn build && yarn link && wsle"
   },
   "main": "./dist/index.js",
@@ -40,7 +41,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-unused-imports": "1.1.4",
     "eslint-plugin-vue": "7.17.0",
-    "jest": "^27.1.1",
+    "husky": "7.0.2",
     "jest": "27.1.1",
     "prettier": "2.4.0",
     "ts-jest": "27.0.5",
