@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/DerYeger/wsl-export/compare/v1.2.3...v1.2.4) (2021-09-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency listr2 to v3.12.1 ([f260bcb](https://github.com/DerYeger/wsl-export/commit/f260bcbdc2d46ea92935e898b883ad506fa70a6e))
+
 ## [1.2.3](https://github.com/DerYeger/wsl-export/compare/v1.2.2...v1.2.3) (2021-09-14)
 
 
