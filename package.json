@@ -30,7 +30,7 @@
     "execa": "5.1.1",
     "figlet": "1.5.2",
     "inquirer": "8.1.5",
-    "listr2": "3.12.1"
+    "listr2": "3.12.2"
   },
   "devDependencies": {
     "@types/figlet": "1.5.4",
