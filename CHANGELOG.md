@@ -1,3 +1,10 @@
+## [1.2.9](https://github.com/DerYeger/wsl-export/compare/v1.2.8...v1.2.9) (2021-10-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency inquirer to v8.2.0 ([3090337](https://github.com/DerYeger/wsl-export/commit/30903372d251c386d812743709323b1f40c5a792))
+
 ## [1.2.8](https://github.com/DerYeger/wsl-export/compare/v1.2.7...v1.2.8) (2021-10-01)
 
 
