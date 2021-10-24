@@ -1,3 +1,10 @@
+## [1.2.12](https://github.com/DerYeger/wsl-export/compare/v1.2.11...v1.2.12) (2021-10-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency commander to v8.3.0 ([c20aa7d](https://github.com/DerYeger/wsl-export/commit/c20aa7de8844d84a6af51d612282a67839180ea3))
+
 ## [1.2.11](https://github.com/DerYeger/wsl-export/compare/v1.2.10...v1.2.11) (2021-10-21)
 
 
