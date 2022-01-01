@@ -1,3 +1,10 @@
+## [1.2.24](https://github.com/DerYeger/wsl-export/compare/v1.2.23...v1.2.24) (2022-01-01)
+
+
+### Bug Fixes
+
+* **release:** schedule release ([b24803e](https://github.com/DerYeger/wsl-export/commit/b24803e694480b3e555ab726a730f43546420991))
+
 ## [1.2.23](https://github.com/DerYeger/wsl-export/compare/v1.2.22...v1.2.23) (2021-12-24)
 
 
