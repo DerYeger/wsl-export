@@ -35,7 +35,7 @@
   "devDependencies": {
     "@types/figlet": "1.5.4",
     "@types/inquirer": "8.2.0",
-    "@types/jest": "27.4.0",
+    "@types/jest": "27.4.1",
     "@types/node": "16.11.25",
     "eslint": "8.9.0",
     "eslint-config-prettier": "8.4.0",
