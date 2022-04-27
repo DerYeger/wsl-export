@@ -29,7 +29,7 @@
     "commander": "8.3.0",
     "execa": "5.1.1",
     "figlet": "1.5.2",
-    "inquirer": "8.2.2",
+    "inquirer": "8.2.3",
     "listr2": "4.0.5"
   },
   "devDependencies": {
