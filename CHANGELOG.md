@@ -1,3 +1,10 @@
+## [1.2.47](https://github.com/DerYeger/wsl-export/compare/v1.2.46...v1.2.47) (2022-04-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency inquirer to v8.2.4 ([5581292](https://github.com/DerYeger/wsl-export/commit/55812920a91ca672c04da68980f223764f7fdedc))
+
 ## [1.2.46](https://github.com/DerYeger/wsl-export/compare/v1.2.45...v1.2.46) (2022-04-27)
 
 
