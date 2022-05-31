@@ -36,7 +36,7 @@
     "@types/figlet": "1.5.4",
     "@types/inquirer": "8.2.1",
     "@types/jest": "27.5.1",
-    "@types/node": "16.11.36",
+    "@types/node": "16.11.38",
     "eslint": "8.16.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.0.0",
