@@ -1,6 +1,6 @@
 {
   "name": "wsl-export",
-  "version": "1.2.56",
+  "version": "1.2.57",
   "description": "Interactive CLI for exporting WSL distributions.",
   "repository": "https://github.com/DerYeger/wsl-export.git",
   "author": "Jan Müller <janmueller3698@gmail.com>",
